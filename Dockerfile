@@ -53,7 +53,7 @@ RUN echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-bac
     libssl-dev \
     subversion \
     wget && \
-  apt-get clean && rm -rf /var/lib/apt/lists/*
+  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV PATH="/opt/rubies/${RUBY_VERSION}/bin:${PATH}"
 
