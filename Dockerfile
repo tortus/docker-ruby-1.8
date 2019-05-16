@@ -42,6 +42,7 @@ RUN echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-bac
   cd .. && rm ruby-build.tar.gz && rm -rf ruby-build-${RUBY_BUILD_VERSION} && \
   mkdir -p /opt/rubies && \
   /usr/local/bin/ruby-build -v ${RUBY_VERSION} /opt/rubies/${RUBY_VERSION} && \
+  ln -s /opt/rubies/1.8.7-p375 /opt/rubies/ruby-1.8.7-p375 && \
   /opt/rubies/${RUBY_VERSION}/bin/gem install rake -v 0.7.3 --no-ri --no-rdoc && \
   /opt/rubies/${RUBY_VERSION}/bin/gem install slimgems --no-ri --no-rdoc && \
   /opt/rubies/${RUBY_VERSION}/bin/gem install bundler -v ${BUNDLER_VERSION} --no-ri --no-rdoc && \
