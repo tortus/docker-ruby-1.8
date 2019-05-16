@@ -31,7 +31,9 @@ RUN echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-bac
     ca-certificates \
     libreadline6 \
     libreadline-dev \
+    libssl1.0.0 \
     libssl-dev \
+    openssl \
     subversion \
     wget && \
   wget -O ruby-build.tar.gz ${RUBY_BUILD_URL} && \
