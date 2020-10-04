@@ -8,12 +8,6 @@ ARG RUBY_BUILD_VERSION="20180601"
 ARG RUBY_BUILD_URL="https://github.com/rbenv/ruby-build/archive/v${RUBY_BUILD_VERSION}.tar.gz"
 ARG BUNDLER_VERSION="1.17.3"
 
-# Include tini since there is no reason not to. Just makes the image safer.
-ARG TINI_VERSION="v0.18.0"
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
-ENTRYPOINT ["/tini", "--"]
-
 # 1. Change sources so packages can be installed now that Debian 8 is EOL.
 # 2. Install Ruby 1.8 build dependencies.
 # 3. Build Ruby 1.8.
